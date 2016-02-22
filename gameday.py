@@ -76,7 +76,7 @@ def run_gid(gid, gametype):
             break
 
         except Exception as e:
-            print e
+            print "EXCEPTION: %s, RETRIES: %s" % (e, retries)
             retries += 1
 
 
@@ -173,7 +173,7 @@ if __name__ == '__main__':
     else:
         months = args.month
 
-    pool = Pool(10)  # 10 worker processes
+    pool = Pool(15)
 
     for month in months:
         if args.day is None:

@@ -12,7 +12,7 @@ class NullHandler(Handler):
 
 class CONSTANTS:
     BASE = 'http://gd2.mlb.com/components/game/%LEAGUE%/'
-    FETCH_TRIES = 25
+    FETCH_TRIES = 50
 
 
 class Fetcher:
