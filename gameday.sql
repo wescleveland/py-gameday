@@ -66,6 +66,7 @@ DROP TABLE IF EXISTS `pitch`;
 CREATE TABLE `pitch` (
 	/* custom fields */
 	game_id varchar(30) not null,
+	event_num int default null,
 	num int default null,
 	pitcher int default null,
 	batter int default null,
@@ -98,6 +99,7 @@ CREATE TABLE `pitch` (
 	ax decimal(7,3) default null,
 	ay decimal(7,3) default null,
 	az decimal(7,3) default null,
+	nasty decimal(7,3) default null,
 	break_y decimal(7,3) default null,
 	break_angle decimal(7,3) default null,
 	break_length decimal(7,3) default null,
@@ -106,6 +108,7 @@ CREATE TABLE `pitch` (
 	spin_dir decimal(7,3) default null,
 	spin_rate decimal(7,3) default null,
 	zone tinyint default null,
+	tfs_zulu varchar(25) default null,
 	primary key(game_id, num, id)
 ) Engine=InnoDB;
 
